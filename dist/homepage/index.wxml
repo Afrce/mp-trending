@@ -1,0 +1,72 @@
+<view class="top">
+    <view class="weui-search-bar">
+        <view class="weui-search-bar__form">
+        <view class="weui-search-bar__box">
+            <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+            <input type="text" class="weui-search-bar__input" placeholder="请输入查询内容" value="{{projectName}}" bindinput="wxSearchInput" />
+            <view class="weui-icon-clear" wx:if="{{projectName.length > 0}}" bindtap="wxSearchClear">
+            <icon type="clear" size="14"></icon>
+            </view>
+        </view>
+        </view>
+        <view class="weui-search-bar__cancel-btn">
+            <text wx:if="{{projectName.length>0}}" data-key='search' bindtap="search">搜索</text>
+        </view>
+    </view>
+
+    <view class="section">
+        <picker mode="multiSelector" bindchange="bindMultiPickerChange"  value="{{multiIndex}}" range="{{dataArr}}">
+            <view class="picker">
+                <span class="half">
+                    <i-icon type="collection_fill" size="20" color="#FFF" class="icon"></i-icon>
+                    {{dayArr[multiIndex[0]]}}
+                    <i-icon type="unfold" size="20" color="#FFF" class="icon"></i-icon>
+                </span>
+
+                <span class="half">
+                    <i-icon type="createtask" size="20" color="#FFF" class="icon"></i-icon>
+                    {{language[multiIndex[1]]}}                
+                    <i-icon type="unfold" size="20" color="#FFF"  class="icon"></i-icon>
+                </span>
+            </view>
+        </picker>
+    </view>
+</view>
+<view class="result">
+    <scroll-view wx:if="{{TrendingShow === 'show'}}" scroll-y="{{true}}"  class="scroll">
+        <i-card wx:for="{{Trending}}" title="{{item.getStar}}" extra="{{item.project}}" thumb="{{item.avator}}">
+            <view slot="content">{{item.description}}</view>
+            <view slot="footer">
+                <span class="repo-language-color"> </span>
+                <span> {{item.type == "" ? "unKnow" : item.type}}</span>
+                <span>\r\t\r\t\r\t\r\t\r\t\r\t<i-icon type="collection_fill" size="16"></i-icon>{{item.AllStar}}</span>
+                <span>
+                    \r\t\r\t\r\t\r\t\r\t<i-icon type="share" size="16"></i-icon>{{item.forks}}
+                </span>
+            </view>
+        </i-card>        
+        <block>       
+            <i-load-more tip="热门项目已加载完毕" loading="{{ false }}" />   
+        </block>
+    </scroll-view>
+    <scroll-view wx:if="{{RepositoriesShow === 'show'}}"  class="scroll" scroll-y="{{true}}" bindscrolltolower="loadingMore">
+        <block wx:if="{{Repositories.length > 0}}">
+            <i-card wx:for="{{Repositories}}"  extra="{{item.full_name}}">
+                <view slot="content">{{item.description}}</view>
+                <view slot="footer">
+                    <span class="repo-language-color"> </span>
+                    <span> {{item.language == "" || item.language == null ? "unKnow" : item.language}}</span>
+                    <span>\r\t\r\t\r\t\r\t\r\t\r\t<i-icon type="collection_fill" size="16"></i-icon>{{item.stargazers_count}}</span>
+                    <span>
+                        \r\t\r\t\r\t\r\t\r\t<i-icon type="share" size="16"></i-icon>{{item.forks}}
+                    </span>
+                </view>
+            </i-card>
+        </block>
+        <block wx:else>       
+            <i-load-more tip="暂无数据" loading="{{ false }}" />   
+        </block>
+    </scroll-view>
+</view>  
+<i-spin size="large" fix wx:if="{{ spinShow }}"></i-spin> 
+<view style="height:7vh"></view>

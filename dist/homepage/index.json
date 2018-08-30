@@ -1,0 +1,12 @@
+{
+    "component": true,
+    "usingComponents": {
+        "i-input": "../input/index",
+        "i-button": "../button/index",
+        "i-icon": "../icon/index",
+        "i-card": "../card/index",
+        "i-spin": "../spin/index",        
+        "i-toast": "../toast/index",
+        "i-load-more": "../load-more/index"
+    }
+}

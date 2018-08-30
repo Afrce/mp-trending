@@ -1,0 +1,12 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/repository/index"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#2d8cf0",
+    "navigationBarTitleText": "SAHULULA-GITHUB",
+    "navigationBarTextStyle":"#FFF"
+  }
+}
