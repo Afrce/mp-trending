@@ -1,0 +1,39 @@
+@import '../../wxParse/wxParse.wxss';
+.page{
+    font-size: 14px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #fafbfc;
+    height: 100vh;
+}
+.contents{
+    padding: 5px 10px;
+}
+.description{
+    font-size: 14px;
+    margin: 10px 0;
+}
+.rows{    
+    flex-direction: row;
+}
+.info{
+    width: 50%;
+    float: left;
+    text-align: center;
+    margin-top: 5px;
+}
+.info view{
+    height: 45px;
+    line-height: 45px;
+}
+.title{
+    background: #2d8cf0;
+    color: #FFF;
+    border: 1px solid #d1d5da;
+    overflow: hidden;
+    font-size: 16px;
+}
+.info view:nth-child(2){
+    background: #FFF;
+    border: 1px solid #d1d5da;
+    border-top:0;
+}

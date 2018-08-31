@@ -10,7 +10,9 @@ Component({
         spinShow: false,
         page: 1,
         RepositoriesShow: "hide",
-        Repositories: []
+        Repositories: [],
+        canLoad: true,
+        allLoad: false
     },
     methods: {
         wxSearchInput(e){
@@ -41,6 +43,12 @@ Component({
                 success: (res)=>{
                     console.log(res.data)
                     if(res.data.status){
+                        if(res.data.data.items.length == 0){
+                            _this.setData({
+                                canLoad: false,
+                                allLoad: true
+                            })
+                        }
                         _this.setData({
                             TrendingShow: "hide",
                             RepositoriesShow: "show",
@@ -86,6 +94,9 @@ Component({
               })
         },
         loadingMore(){
+            if(!this.canLoad){
+                return false
+            }
             let _this = this
             let project = this.data.projectName;
             _this.setData({
@@ -104,7 +115,13 @@ Component({
                     'content-type': 'application/x-www-form-urlencoded' // 默认值
                 },
                 success: (res)=>{
-                    if(res.data.status){                    
+                    if(res.data.status){
+                        if(res.data.data.items.length == 0){
+                            _this.setData({
+                                canLoad: false,
+                                allLoad: true
+                            })
+                        }                    
                     let Repositories = _this.data.Repositories.concat(res.data.data.items)
                     console.log(Repositories)
                         _this.setData({

@@ -1,5 +1,10 @@
 {
     "usingComponents": {
-        "i-spin": "../../dist/spin/index"
+        "i-spin": "../../dist/spin/index",
+        "i-toast": "../../dist/toast/index",        
+        "i-tabs": "../../dist/tabs/index",
+        "i-tab": "../../dist/tab/index",
+        "i-icon": "../../dist/icon/index",
+        "i-button": "../../dist/button/index"
     }  
 }

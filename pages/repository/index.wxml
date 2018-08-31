@@ -1,7 +1,41 @@
-<view >
-    {{item}}
+<view class="page">
+    <i-tabs current="{{ current }}" color="#FFF" bindchange="handleChange">
+        <i-tab key="code" title="代码"></i-tab>
+        <i-tab key="issues" title="issues"></i-tab>
+        <i-tab key="team" title="成员"></i-tab>
+    </i-tabs>
+    <view class="contents">
+        <view wx:if="{{current== 'code'}}">
+            <view class="description">
+               \r\t\r\t\r{{repoData.description}}
+            </view>
+            <view class="rows">
+                <view class="info">
+                    <view class="title"><i-icon type="collection_fill" size="16"></i-icon>star</view>
+                    <view>{{repoData.stargazers_count}}</view>
+                </view >
+                <view class="info">
+                    <view class="title"><i-icon type="share" size="16"></i-icon>forks</view>
+                    <view>{{repoData.forks_count}}</view>
+                </view>
+                <view class="info">
+                    <view class="title"><i-icon type="interactive" size="16"></i-icon>issues</view>
+                    <view>{{repoData.open_issues}}</view>
+                </view>
+                <view class="info">
+                    <view class="title"><i-icon type="group" size="16"></i-icon>watchers</view>
+                    <view>{{repoData.watchers}}</view>
+                </view>
+            </view>            
+            <i-button bind:click="handleClick" type="primary">查看源码</i-button>
+        </view>
+        <view wx:if="{{current== 'issues'}}">
 
+        </view>
+        <view wx:if="{{current== 'team'}}">
 
-    
-<i-spin size="large" fix wx:if="{{ spinShow }}"></i-spin> 
+        </view>   
+    </view> 
+    <i-spin size="large" fix wx:if="{{ spinShow }}"></i-spin> 
+    <i-toast id="toast" />
 </view>

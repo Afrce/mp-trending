@@ -223,5 +223,4 @@
   }
   .scroll{
     height: 78vh;
-    white-space:nowrap;
   }

@@ -1,7 +1,10 @@
 <view class="i-class i-card {{ full ? 'i-card-full' : '' }}">
     <view class="i-class i-card-header">
-        <view class="i-card-header-extra" wx:if="{{ extra }}">
+        <view class="i-card-header-extra" wx:if="{{ extra && type == false }}">            
             <navigator url="../../pages/repository/index?item={{extra}}">{{ extra }}</navigator>
+        </view>        
+        <view class="i-card-header-extra" wx:if="{{ extra && type == true }}">
+            {{ extra }}
         </view>
     </view>    
     <view class="i-card-header-extra getStar">
