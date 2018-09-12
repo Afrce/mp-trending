@@ -1,4 +1,1 @@
-<import src="../../wxParse/wxParse.wxml"/>
-<view >
-    <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
-</view>
+<import src="/pages/md/index.vue.wxml" /><template is="e7447f3a" data="{{ ...$root['0'], $root }}"/>
