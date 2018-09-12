@@ -34,7 +34,7 @@
 </view>
 <view class="result">
     <scroll-view wx:if="{{TrendingShow === 'show'}}" scroll-y="{{true}}"  class="scroll">
-        <i-card wx:for="{{Trending}}" title="{{item.getStar}}" extra="{{item.project}}" thumb="{{item.avator}}">
+        <i-card wx:for="{{Trending}}" wx:key="key" title="{{item.getStar}}" extra="{{item.project}}" thumb="{{item.avator}}">
             <view slot="content">{{item.description}}</view>
             <view slot="footer">
                 <span class="repo-language-color"> </span>
@@ -51,7 +51,7 @@
     </scroll-view>
     <scroll-view wx:if="{{RepositoriesShow === 'show'}}"  class="scroll" scroll-y="{{true}}" bindscrolltolower="loadingMore">
         <block wx:if="{{Repositories.length > 0}}">
-            <i-card wx:for="{{Repositories}}"  extra="{{item.full_name}}">
+            <i-card wx:for="{{Repositories}}" wx:key="key" extra="{{item.full_name}}">
                 <view slot="content">{{item.description}}</view>
                 <view slot="footer">
                     <span class="repo-language-color"> </span>

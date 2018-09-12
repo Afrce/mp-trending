@@ -1,7 +1,9 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/repository/index"
+    "pages/repository/index",
+    "pages/code/index",
+    "pages/md/index"
   ],
   "window":{
     "backgroundTextStyle":"light",

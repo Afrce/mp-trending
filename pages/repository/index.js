@@ -1,6 +1,4 @@
 const { $Toast } = require('../../dist/base/index');
-var Base64 = require('../../utils/base64.min.js').Base64
-var WxParse = require('../../wxParse/wxParse.js');
 Page({
 
     data: {
@@ -18,17 +16,17 @@ Page({
        })
     },
     handleClick(){
-
+        let _this = this
+        wx.navigateTo({
+            url: '/pages/code/index?project=' + _this.data.item + "&url="
+          })
     },
     onLoad: function(options) {
-        let c = "IyBnaXRidWJfdHJlbmRpbmcKUEhQ6I635Y+WdHJlbmRpbmfkuIrnmoTpobnn\nm64K\n";
-        let md = Base64.decode(c);
         wx.setNavigationBarTitle({
             title: options.item 
         })
         this.setData({
             item: options.item,
-            md: md
         })
         let _this =this;
         let url = "https://api.github.com/repos/" + options.item;
@@ -54,7 +52,6 @@ Page({
                 })
             }
         });        
-        WxParse.wxParse('article', 'md', md, _this, 5);
     },
     onReady: function(){
 	}

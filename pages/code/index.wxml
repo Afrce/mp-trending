@@ -1,0 +1,11 @@
+<view >
+    <i-cell-group>
+        <view wx:for="{{item}}" wx:key="key">
+            <i-cell isLink title="{{item.name}}" data-type="{{item.type}}" data-url="{{item.url}}" bind:click="handleClick">
+                <i-icon type="document" size="16" slot="icon" wx:if="{{item.type == 'file'}}"></i-icon>
+                <i-icon wx:else type="other" size="16" slot="icon"></i-icon>
+            </i-cell>
+        </view>        
+    </i-cell-group>
+</view>
+<i-toast id="toast" />
