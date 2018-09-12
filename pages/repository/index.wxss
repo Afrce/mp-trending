@@ -1,4 +1,3 @@
-@import '../../wxParse/wxParse.wxss';
 .page{
     font-size: 14px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -36,4 +35,8 @@
     background: #FFF;
     border: 1px solid #d1d5da;
     border-top:0;
+}
+.rows{
+    margin-bottom: 15px;
+    display: flex;
 }
