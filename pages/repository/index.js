@@ -33,9 +33,9 @@ Page({
                             spinShow: false
                         })
                     }else{
-                        newData = _this.data.issuesData.concat(res.data)
+                        let newData = _this.data.issuesData.concat(res.data)
                         _this.setData({
-                            issuesData: res.newData,
+                            issuesData: newData,
                             spinShow: false
                         })
                     }

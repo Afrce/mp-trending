@@ -5,6 +5,7 @@
         <i-tab key="team" title="成员"></i-tab>
     </i-tabs>
     <view class="contents">
+    <i-spin size="large" fix wx:if="{{ spinShow }}"></i-spin> 
         <view wx:if="{{current== 'code'}}">
             <view class="description">
                \r\t\r\t\r{{repoData.description}}
@@ -38,14 +39,16 @@
                     </i-cell>
                 </i-cell-group>
             </view>
-            <view style="text-align:center;padding-top:15px" wx:if="{{issuesData.length > 0 || loadingMore == false}}">                
+            <view style="text-align:center;padding-top:15px" wx:if="{{issuesData.length == 0 || loadingMore == false}}">                
                 <i-load-more tip="已全部加载"  loading="{{false}}" />
+            </view>
+            <view style="text-align:center;padding-top:15px" wx:if="{{spinShow}}">                
+                <i-load-more tip="加载中"  loading="{{true}}" />
             </view>
         </view>
         <view wx:if="{{current== 'team'}}">
 
         </view>   
     </view> 
-    <i-spin size="large" fix wx:if="{{ spinShow }}"></i-spin> 
     <i-toast id="toast" />
 </view>
