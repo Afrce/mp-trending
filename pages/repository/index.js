@@ -95,6 +95,7 @@ Page({
     },
     handleClick1(event){
         let url = event.currentTarget.dataset.url
+        url = url.replace(/github.com/,"minororange.com/github/")
         wx.navigateTo({
             url: '/pages/issues/index?url=' + url
         })

@@ -74,7 +74,7 @@ Component({
                 spinShow: true
             })
             wx.request({
-                url: 'https://api.minororange.com/github/getTrending', //仅为示例，并非真实的接口地址
+                url: 'https://api.minororange.com/getTrending', //仅为示例，并非真实的接口地址
                 method: "POST",
                 data: {
                    day: _this.data.multiIndex[0],

@@ -60,6 +60,7 @@ Page({
     },
     handleClick(event){
         let url = event.currentTarget.dataset.url
+        url = url.replace(/github.com/,"minororange.com/github/")
         let type = event.currentTarget.dataset.type
         let project = this.data.project
         if(type == "dir"){
