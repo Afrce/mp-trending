@@ -29,7 +29,7 @@ Component({
                 TrendingShow: false,
                 page: 1,
             })
-            let url = "http://api.sahulula.club/searchRepository";
+            let url = "https://api.minororange.com/searchRepository";
             wx.request({
                 url: url,
                 method: 'POST',
@@ -74,7 +74,7 @@ Component({
                 spinShow: true
             })
             wx.request({
-                url: 'http://api.sahulula.club/getTrending', //仅为示例，并非真实的接口地址
+                url: 'https://api.minororange.com/getTrending', //仅为示例，并非真实的接口地址
                 method: "POST",
                 data: {
                    day: _this.data.multiIndex[0],
@@ -103,7 +103,7 @@ Component({
                 spinShow: true
             })
             let page = _this.data.page + 1;
-            let url = "http://api.sahulula.club/searchRepository";
+            let url = "https://api.minororange.com/searchRepository";
             wx.request({
                 url: url,
                 method: 'POST',

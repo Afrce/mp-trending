@@ -3,7 +3,9 @@
     "pages/index/index",
     "pages/repository/index",
     "pages/code/index",
-    "pages/md/index"
+    "pages/md/index",
+    "pages/team/index",
+    "pages/issues/index"
   ],
   "window":{
     "backgroundTextStyle":"light",

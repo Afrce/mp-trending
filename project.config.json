@@ -11,8 +11,8 @@
 		"newFeature": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.1.1",
-	"appid": "wxb0a09b13fc87486a",
+	"libVersion": "2.3.0",
+	"appid": "wx21625ac0d3ac1c61",
 	"projectname": "github-self",
 	"isGameTourist": false,
 	"condition": {

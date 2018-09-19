@@ -38,7 +38,7 @@
             <view slot="content">{{item.description}}</view>
             <view slot="footer">
                 <span class="repo-language-color"> </span>
-                <span> {{item.type == "" ? "unKnow" : item.type}}</span>
+                <span> {{item.type == "" ? "NULL" : item.type}}</span>
                 <span>\r\t\r\t\r\t\r\t\r\t\r\t<i-icon type="collection_fill" size="16"></i-icon>{{item.AllStar}}</span>
                 <span>
                     \r\t\r\t\r\t\r\t\r\t<i-icon type="share" size="16"></i-icon>{{item.forks}}

@@ -7,7 +7,7 @@ Page({
     },
     getProjectList(project){
         let _this = this
-        let url = "https://api.github.com/repos/"+project+"/contents"
+        let url = "https://api.minororange.com/repos/"+project+"/contents"
         wx.request({
             url: url,
             method: 'GET',
@@ -33,11 +33,11 @@ Page({
             method: 'GET',
             data: {},
             header: 'application/x-www-form-urlencoded',
-            success: (data)=>{                
+            success: (data)=>{
                 _this.setData({
                     item: data.data
                 })
-            },            
+            },
             fail: (data)=>{
                 console.log(data)
             }

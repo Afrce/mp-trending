@@ -30,7 +30,17 @@
             <i-button bind:click="handleClick" type="primary">查看源码</i-button>
         </view>
         <view wx:if="{{current== 'issues'}}">
-
+            <view wx:if="{{issuesData.length > 0}}">
+                <i-cell-group wx:for="{{issuesData}}" wx:key="{{key}}">
+                    <i-cell title="{{item.title}}" label="{{item.created_at}}" data-url="{{item.url}}" only-tap-footer bind:click="handleClick1">
+                        <i-icon slot="footer" type="enter"></i-icon>
+                        <image slot="icon" class="avatar" src="{{item.user.avatar_url}}"></image>
+                    </i-cell>
+                </i-cell-group>
+            </view>
+            <view style="text-align:center;padding-top:15px" wx:if="{{issuesData.length > 0 || loadingMore == false}}">                
+                <i-load-more tip="已全部加载"  loading="{{false}}" />
+            </view>
         </view>
         <view wx:if="{{current== 'team'}}">
 
