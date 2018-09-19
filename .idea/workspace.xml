@@ -1,28 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="53fab1c4-0c3d-4f21-8b5b-b98c61268649" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/common/manifest1.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/common/vendor1.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pages/issues/index.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pages/issues/index.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pages/issues/index.vue.wxml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pages/issues/index.wxml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pages/issues/index.wxss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pages/team/index.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pages/team/index.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pages/team/index.wxml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pages/team/index.wxss" />
+    <list default="true" id="53fab1c4-0c3d-4f21-8b5b-b98c61268649" name="Default" comment="issues + api换为备案的">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app.json" afterPath="$PROJECT_DIR$/app.json" />
       <change beforePath="$PROJECT_DIR$/dist/homepage/index.js" afterPath="$PROJECT_DIR$/dist/homepage/index.js" />
-      <change beforePath="$PROJECT_DIR$/dist/homepage/index.wxml" afterPath="$PROJECT_DIR$/dist/homepage/index.wxml" />
       <change beforePath="$PROJECT_DIR$/pages/code/index.js" afterPath="$PROJECT_DIR$/pages/code/index.js" />
+      <change beforePath="$PROJECT_DIR$/pages/issues/index.js" afterPath="$PROJECT_DIR$/pages/issues/index.js" />
       <change beforePath="$PROJECT_DIR$/pages/repository/index.js" afterPath="$PROJECT_DIR$/pages/repository/index.js" />
-      <change beforePath="$PROJECT_DIR$/pages/repository/index.json" afterPath="$PROJECT_DIR$/pages/repository/index.json" />
-      <change beforePath="$PROJECT_DIR$/pages/repository/index.wxml" afterPath="$PROJECT_DIR$/pages/repository/index.wxml" />
-      <change beforePath="$PROJECT_DIR$/pages/repository/index.wxss" afterPath="$PROJECT_DIR$/pages/repository/index.wxss" />
-      <change beforePath="$PROJECT_DIR$/project.config.json" afterPath="$PROJECT_DIR$/project.config.json" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -38,6 +22,16 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/issues/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="603">
+              <caret line="312" column="26" lean-forward="true" selection-start-line="312" selection-start-column="25" selection-end-line="312" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -68,8 +62,8 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dist/homepage/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="31" column="31" lean-forward="false" selection-start-line="31" selection-start-column="31" selection-end-line="31" selection-end-column="50" />
+            <state relative-caret-position="289">
+              <caret line="105" column="57" lean-forward="false" selection-start-line="105" selection-start-column="57" selection-end-line="105" selection-end-column="57" />
               <folding />
             </state>
           </provider>
@@ -78,8 +72,8 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/code/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-486">
-              <caret line="9" column="46" lean-forward="false" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="46" />
+            <state relative-caret-position="243">
+              <caret line="9" column="53" lean-forward="false" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="53" />
               <folding />
             </state>
           </provider>
@@ -88,8 +82,8 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pages/repository/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="136" column="49" lean-forward="false" selection-start-line="136" selection-start-column="49" selection-end-line="136" selection-end-column="49" />
+            <state relative-caret-position="694">
+              <caret line="127" column="31" lean-forward="true" selection-start-line="127" selection-start-column="31" selection-end-line="127" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -105,8 +99,18 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.wxss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/index/index.wxss">
+      <file leaf-file-name="app.wxss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app.wxss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -121,6 +125,8 @@
     <findStrings>
       <find>api.</find>
       <find>api.github.com</find>
+      <find>url</find>
+      <find>api.minororange.com</find>
     </findStrings>
     <dirStrings>
       <dir>D:\coding\GIthub-self</dir>
@@ -133,7 +139,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/pages/index/index.wxml" />
+        <option value="$PROJECT_DIR$/pages/issues/index.js" />
         <option value="$PROJECT_DIR$/pages/code/index.js" />
+        <option value="$PROJECT_DIR$/dist/homepage/index.js" />
         <option value="$PROJECT_DIR$/pages/repository/index.js" />
       </list>
     </option>
@@ -190,6 +198,17 @@
               <item name="GIthub-self" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="pages" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
+            <path>
+              <item name="GIthub-self" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GIthub-self" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="pages" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="issues" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="GIthub-self" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GIthub-self" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="utils" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -230,12 +249,20 @@
       <updated>1534489479826</updated>
       <workItem from="1534489481033" duration="3259000" />
       <workItem from="1534735904376" duration="2145000" />
-      <workItem from="1537323063111" duration="189000" />
+      <workItem from="1537323063111" duration="1312000" />
     </task>
+    <task id="LOCAL-00001" summary="issues + api换为备案的">
+      <created>1537323329426</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1537323329426</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5593000" />
+    <option name="totallyTimeSpent" value="6716000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -266,6 +293,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="issues + api换为备案的" />
+    <option name="LAST_COMMIT_MESSAGE" value="issues + api换为备案的" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -357,23 +388,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/project.config.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/index/index.wxss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -401,26 +416,66 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dist/homepage/index.js">
+    <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="31" column="31" lean-forward="false" selection-start-line="31" selection-start-column="31" selection-end-line="31" selection-end-column="50" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.wxss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project.config.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/issues/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="603">
+          <caret line="312" column="26" lean-forward="true" selection-start-line="312" selection-start-column="25" selection-end-line="312" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/code/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-486">
-          <caret line="9" column="46" lean-forward="false" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="46" />
+        <state relative-caret-position="243">
+          <caret line="9" column="53" lean-forward="false" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/homepage/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="105" column="57" lean-forward="false" selection-start-line="105" selection-start-column="57" selection-end-line="105" selection-end-column="57" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/repository/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="136" column="49" lean-forward="false" selection-start-line="136" selection-start-column="49" selection-end-line="136" selection-end-column="49" />
+        <state relative-caret-position="694">
+          <caret line="127" column="31" lean-forward="true" selection-start-line="127" selection-start-column="31" selection-end-line="127" selection-end-column="31" />
           <folding />
         </state>
       </provider>

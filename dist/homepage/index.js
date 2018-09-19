@@ -29,7 +29,7 @@ Component({
                 TrendingShow: false,
                 page: 1,
             })
-            let url = "https://api.minororange.com/searchRepository";
+            let url = "https://api.minororange.com/github/searchRepository";
             wx.request({
                 url: url,
                 method: 'POST',
@@ -54,13 +54,13 @@ Component({
                             RepositoriesShow: "show",
                             Repositories: res.data.data.items,
                             spinShow: false
-                        })  
+                        })
                     }else{
                     }
-                    
+
                 },
             });
-            
+
         },
         bindMultiPickerChange(e){
             this.setData({
@@ -74,7 +74,7 @@ Component({
                 spinShow: true
             })
             wx.request({
-                url: 'https://api.minororange.com/getTrending', //仅为示例，并非真实的接口地址
+                url: 'https://api.minororange.com/github/getTrending', //仅为示例，并非真实的接口地址
                 method: "POST",
                 data: {
                    day: _this.data.multiIndex[0],
@@ -84,7 +84,7 @@ Component({
                     'content-type': 'application/x-www-form-urlencoded' // 默认值
                 },
                 success: function(res) {
-                    _this.setData({                        
+                    _this.setData({
                         Trending: res.data.data,
                         TrendingShow: "show",
                         RepositoriesShow: "hide",
@@ -103,7 +103,7 @@ Component({
                 spinShow: true
             })
             let page = _this.data.page + 1;
-            let url = "https://api.minororange.com/searchRepository";
+            let url = "https://api.minororange.com/github/searchRepository";
             wx.request({
                 url: url,
                 method: 'POST',
@@ -121,7 +121,7 @@ Component({
                                 canLoad: false,
                                 allLoad: true
                             })
-                        }                    
+                        }
                     let Repositories = _this.data.Repositories.concat(res.data.data.items)
                     console.log(Repositories)
                         _this.setData({
@@ -130,10 +130,10 @@ Component({
                             Repositories: Repositories,
                             spinShow: false,
                             page: page
-                        })  
+                        })
                     }else{
                     }
-                    
+
                 },
             });
         }
@@ -141,5 +141,5 @@ Component({
     attached: function() {
         this.getTending()
     }
-    
+
 })

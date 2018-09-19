@@ -7,7 +7,7 @@ Page({
     },
     getProjectList(project){
         let _this = this
-        let url = "https://api.minororange.com/repos/"+project+"/contents"
+        let url = "https://api.minororange.com/github/repos/"+project+"/contents"
         wx.request({
             url: url,
             method: 'GET',

@@ -15,7 +15,7 @@ Page({
     getIssuses(){
         let name = this.data.name
         let op = this.data.op
-        let url = "https://api.minororange.com/repos/" + name +"/"+ op +"/issues";
+        let url = "https://api.minororange.com/github/repos/" + name +"/"+ op +"/issues";
         let page = this.data.page
         let _this = this
         wx.request({
@@ -110,7 +110,7 @@ Page({
             name: name[0],
             op  : name[1]
         })
-        let url = "https://api.minororange.com/repos/" + options.item;
+        let url = "https://api.minororange.com/github/repos/" + options.item;
         wx.request({
             url: url,
             method: 'GET',
@@ -134,7 +134,7 @@ Page({
                 })
             }
         });
-        let issues = "https://api.minororange.com/repos/" + options.item +"/issues";
+        let issues = "https://api.minororange.com/github/repos/" + options.item +"/issues";
         wx.request({
             url: issues,
             method: 'GET',
