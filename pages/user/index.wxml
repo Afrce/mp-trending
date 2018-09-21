@@ -1,0 +1,85 @@
+<view >
+    <view class="header">
+        <image src="{{user.avatar_url}}" class="avatar"></image>
+    </view>
+    <view >
+        <i-tabs current="{{ current }}" color="#FFF" bindchange="handleChange">
+            <i-tab key="repos" title="项目({{user.public_repos}})"></i-tab>
+            <i-tab key="following" title="following({{user.following}})"></i-tab>
+            <i-tab key="followers" title="followers({{user.followers}})"></i-tab>
+            <i-tab key="starred" title="starred"></i-tab>
+        </i-tabs>
+        <view wx:if="{{current == 'repos'}}">
+            <i-card wx:for="{{rposData}}" wx:key="key"  extra="{{item.full_name}}">
+                <view slot="content">{{item.description}}</view>
+                <view slot="footer">
+                    <span class="repo-language-color"> </span>
+                    <span> {{item.language == "" ? "NULL" : item.language}}</span>
+                    <span>\r\t\r\t\r\t\r\t\r\t\r\t<i-icon type="collection_fill" size="16"></i-icon>{{item.stargazers_count}}</span>
+                    <span>
+                        \r\t\r\t\r\t\r\t\r\t<i-icon type="share" size="16"></i-icon>{{item.forks}}
+                    </span>
+                </view>
+            </i-card>            
+            <view style="text-align:center;padding-top:15px" wx:if="{{rposData.length == 0 || reposloadingMore == false}}">                
+                <i-load-more tip="已全部加载"  loading="{{false}}" />
+            </view>
+            <view style="text-align:center;padding-top:15px" wx:if="{{loading}}">                
+                <i-load-more tip="加载中"  loading="{{true}}" />
+            </view>         
+        </view>
+        <view wx:if="{{current == 'following'}}">
+            <view wx:if="{{followData.length > 0}}">
+                <i-cell-group wx:for="{{followData}}" wx:key="{{key}}">
+                    <i-cell title="{{item.login}}"  data-name="{{item.login}}" only-tap-footer bind:click="goToUser">
+                        <i-icon slot="footer" type="enter"></i-icon>
+                        <image slot="icon" class="avatar-user" src="{{item.avatar_url}}"></image>
+                    </i-cell>
+                </i-cell-group>
+            </view>                        
+            <view style="text-align:center;padding-top:15px" wx:if="{{followData.length == 0 || FloadingMore == false}}">                
+                <i-load-more tip="已全部加载"  loading="{{false}}" />
+            </view>
+            <view style="text-align:center;padding-top:15px" wx:if="{{loading}}">                
+                <i-load-more tip="加载中"  loading="{{true}}" />
+            </view> 
+        </view>
+        <view wx:if="{{current == 'followers'}}">
+            <view wx:if="{{followerData.length > 0}}">
+                <i-cell-group wx:for="{{followerData}}" wx:key="{{key}}">
+                    <i-cell title="{{item.login}}"  data-name="{{item.login}}" only-tap-footer bind:click="goToUser">
+                        <i-icon slot="footer" type="enter"></i-icon>
+                        <image slot="icon" class="avatar-user" src="{{item.avatar_url}}"></image>
+                    </i-cell>
+                </i-cell-group>
+            </view>                        
+            <view style="text-align:center;padding-top:15px" wx:if="{{followerData.length == 0 || FerloadingMore == false}}">                
+                <i-load-more tip="已全部加载"  loading="{{false}}" />
+            </view>
+            <view style="text-align:center;padding-top:15px" wx:if="{{loading}}">                
+                <i-load-more tip="加载中"  loading="{{true}}" />
+            </view> 
+        </view>
+
+
+        <view wx:if="{{current == 'starred'}}">
+            <i-card wx:for="{{starData}}" wx:key="key"  extra="{{item.full_name}}">
+                <view slot="content">{{item.description}}</view>
+                <view slot="footer">
+                    <span class="repo-language-color"> </span>
+                    <span> {{item.language == "" ? "NULL" : item.language}}</span>
+                    <span>\r\t\r\t\r\t\r\t\r\t\r\t<i-icon type="collection_fill" size="16"></i-icon>{{item.stargazers_count}}</span>
+                    <span>
+                        \r\t\r\t\r\t\r\t\r\t<i-icon type="share" size="16"></i-icon>{{item.forks}}
+                    </span>
+                </view>
+            </i-card>            
+            <view style="text-align:center;padding-top:15px" wx:if="{{starData.length == 0 || starloadingMore == false}}">                
+                <i-load-more tip="已全部加载"  loading="{{false}}" />
+            </view>
+            <view style="text-align:center;padding-top:15px" wx:if="{{loading}}">                
+                <i-load-more tip="加载中"  loading="{{true}}" />
+            </view>         
+        </view>
+    </view>
+</view>
