@@ -4,8 +4,8 @@
     "pages/repository/index",
     "pages/code/index",
     "pages/md/index",
-    "pages/team/index",
-    "pages/issues/index"
+    "pages/issues/index",
+    "pages/user/index"
   ],
   "window":{
     "backgroundTextStyle":"light",

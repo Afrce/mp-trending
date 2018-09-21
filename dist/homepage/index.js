@@ -29,7 +29,7 @@ Component({
                 TrendingShow: false,
                 page: 1,
             })
-            let url = "https://api.minororange.com/github/searchRepository";
+            let url = "https://api.minororange.com/searchRepository";
             wx.request({
                 url: url,
                 method: 'POST',

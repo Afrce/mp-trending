@@ -6,6 +6,7 @@ Page({
         op: "",
         repoData: [],
         issuesData: [],
+        allUserData: [],
         spinShow: true,
         current: "code",
         wemark: {},
@@ -156,6 +157,33 @@ Page({
                 })
             }
         });
+        let users ="https://api.minororange.com/github/repos/" + options.item +"/assignees" 
+        wx.request({
+            url: users,
+            method: 'GET',
+            header: {
+                'content-type': 'application/x-www-form-urlencoded' // 默认值
+            },
+            success: (res)=>{
+                _this.setData({
+                    allUserData: res.data,
+                })
+            },
+            fail: ()=>{
+                _this.setData({
+                })
+                $Toast({
+                    content: '未知错误发生！请稍后再试',
+                    type: 'error'
+                })
+            }
+        });
+    },
+    goToUser(event){
+        let name = event.currentTarget.dataset.name
+        wx.navigateTo({
+            url: '/pages/user/index?user=' + name
+        })
     },
     onReady: function(){
 	}

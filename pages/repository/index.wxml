@@ -47,7 +47,14 @@
             </view>
         </view>
         <view wx:if="{{current== 'team'}}">
-
+            <view wx:if="{{allUserData.length > 0}}">
+                <i-cell-group wx:for="{{allUserData}}" wx:key="{{key}}">
+                    <i-cell title="{{item.login}}"  data-name="{{item.login}}" only-tap-footer bind:click="goToUser">
+                        <i-icon slot="footer" type="enter"></i-icon>
+                        <image slot="icon" class="avatar-user" src="{{item.avatar_url}}"></image>
+                    </i-cell>
+                </i-cell-group>
+            </view> 
         </view>   
     </view> 
     <i-toast id="toast" />
