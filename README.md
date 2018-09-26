@@ -46,7 +46,7 @@
 
 ### 致谢
 
-​	感谢 [minororange](https://github.com/minororange) 同学的备案域名支持=。=
+​	感谢 [@minororange](https://github.com/minororange) 同学的备案域名支持=。=
 
 ### 小程序二维码
 
